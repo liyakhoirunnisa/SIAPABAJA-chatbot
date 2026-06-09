@@ -461,3 +461,37 @@ total_intent: 38
 2. Pastikan status arsip, metadata pengadaan, dan informasi anggaran sudah diisi.
 3. Periksa format serta ukuran dokumen yang diunggah.
 4. Simpan ulang setelah data diperbaiki.
+
+## 38. Intent: lihat_histori_aktivitas
+* **Tags:** `histori_aktivitas`, `lihat_histori`, `riwayat_aktivitas`, `log_pengguna`, `arsip_pbj`
+* **Patterns:**
+    * "Bagaimana melihat histori aktivitas?"
+    * "Di mana melihat riwayat aktivitas?"
+    * "Bagaimana membuka histori aktivitas pengguna?"
+    * "Bagaimana melihat log aktivitas sistem?"
+    * "Di mana letak histori aktivitas?"
+    * "Bagaimana melihat histori aktivitas di Arsip PBJ?"
+* **Responses:**
+1. Login ke sistem sebagai Unit, PPK, atau Super Admin.
+2. Buka menu Arsip PBJ pada sidebar.
+3. Klik tombol atau ikon Histori Aktivitas pada halaman Arsip PBJ.
+4. Sistem menampilkan pop-up Histori Aktivitas.
+5. Pop-up Histori Aktivitas menampilkan tabel berisi waktu, nama akun, role, unit kerja, dan aktivitas yang dilakukan.
+6. Data histori yang tampil mengikuti cakupan akses role pengguna.
+
+## 39. Intent: export_histori_aktivitas
+* **Tags:** `export_histori`, `unduh_histori`, `xlsx`, `histori_aktivitas`, `export_excel`
+* **Patterns:**
+    * "Bagaimana export histori aktivitas?"
+    * "Bagaimana mengunduh histori aktivitas dalam XLSX?"
+    * "Bagaimana download riwayat aktivitas?"
+    * "Bagaimana cara export log aktivitas?"
+    * "Di mana tombol export histori aktivitas?"
+    * "Bagaimana export Excel dari histori aktivitas?"
+* **Responses:**
+1. Login ke sistem sebagai Unit, PPK, atau Super Admin.
+2. Buka menu Arsip PBJ pada sidebar.
+3. Klik tombol atau ikon Histori Aktivitas.
+4. Setelah pop-up Histori Aktivitas muncul, klik ikon Export Excel yang tersedia pada pop-up tersebut.
+5. Sistem akan mengunduh file Histori Aktivitas dalam format XLSX.
+6. Data yang diexport mengikuti cakupan akses role pengguna.

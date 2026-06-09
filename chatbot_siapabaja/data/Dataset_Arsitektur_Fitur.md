@@ -172,3 +172,21 @@ catatan: Dataset ini hanya menjelaskan fitur dan cakupan sistem. Detail langkah 
     * "Pesan sistem apa saja yang dapat muncul?"
     * "Apa fungsi validasi pada SIAPABAJA?"
 * **Responses:** Sistem menyediakan validasi untuk login, kelengkapan metadata, format dan ukuran dokumen, status akun, serta akses berdasarkan role. Pesan seperti akses ditolak, Invalid Credentials, atau data wajib belum lengkap digunakan untuk menjaga keamanan dan konsistensi data.
+
+## 22. Intent: activity_history_feature
+* **Tags:** `histori_aktivitas`, `log_aktivitas`, `riwayat_pengguna`, `audit_trail`
+* **Patterns:**
+    * "Apakah sistem memiliki histori aktivitas?"
+    * "Apa itu fitur histori aktivitas?"
+    * "Aktivitas pengguna apa saja yang dicatat sistem?"
+    * "Apakah SIAPABAJA mencatat aktivitas pengguna?"
+* **Responses:** SIAPABAJA menyediakan fitur Histori Aktivitas untuk mencatat riwayat aktivitas pengguna internal pada arsip. Histori ini menampilkan informasi seperti waktu aktivitas, nama akun, role, unit kerja, dan aktivitas yang dilakukan. Cakupan data histori yang terlihat mengikuti hak akses role pengguna.
+
+## 23. Intent: activity_history_export_feature
+* **Tags:** `export_histori`, `export_xlsx`, `histori_xlsx`, `unduh_histori`
+* **Patterns:**
+    * "Apakah histori aktivitas bisa diexport?"
+    * "Apakah histori aktivitas bisa diunduh dalam Excel?"
+    * "Format export histori aktivitas apa?"
+    * "Apakah sistem menyediakan export histori aktivitas?"
+* **Responses:** SIAPABAJA menyediakan fitur export Histori Aktivitas dalam format XLSX. File export berisi riwayat aktivitas arsip sesuai cakupan akses role pengguna.

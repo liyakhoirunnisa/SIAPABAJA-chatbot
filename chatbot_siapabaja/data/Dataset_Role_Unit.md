@@ -197,16 +197,7 @@ total_intent: 25
     * "Kenapa Unit tidak bisa akses Kelola Menu?"
 * **Responses:** Unit tidak memiliki akses ke menu Kelola Menu atau pengaturan master data. Pengelolaan data dropdown seperti Tahun, Unit Kerja, Status Pekerjaan, dan Jenis Pengadaan hanya tersedia untuk Super Admin.
 
-## 22. Intent: unit_history_restriction
-* **Tags:** `histori_tidak_tersedia`, `log_aktivitas_tidak_tersedia`, `batasan_fitur_unit`, `role_unit`
-* **Patterns:**
-    * "Apakah Unit bisa melihat histori aktivitas?"
-    * "Apakah Unit punya menu log aktivitas?"
-    * "Kenapa histori aktivitas Unit tidak muncul?"
-    * "Apakah Unit bisa melihat riwayat perubahan arsip?"
-* **Responses:** Saat ini role Unit tidak memiliki menu Histori Aktivitas atau Log Aktivitas. Unit hanya dapat menggunakan menu dan aksi yang tersedia sesuai cakupan arsip unitnya sendiri.
-
-## 23. Intent: unit_archive_supervision_scope
+## 22. Intent: unit_archive_supervision_scope
 * **Tags:** `pengawasan_arsip_unit`, `ppk_super_admin`, `arsip_unit`, `role_unit`
 * **Patterns:**
     * "Siapa yang bisa mengawasi arsip Unit?"
@@ -215,7 +206,7 @@ total_intent: 25
     * "Apakah arsip Unit bisa diperiksa role lain?"
 * **Responses:** Arsip Unit berada dalam cakupan pengawasan PPK dan Super Admin. PPK dapat mengelola arsip Unit untuk kebutuhan pengawasan, sedangkan Super Admin memiliki kewenangan penuh terhadap seluruh arsip sistem.
 
-## 24. Intent: unit_metadata_permission
+## 23. Intent: unit_metadata_permission
 * **Tags:** `metadata_unit`, `input_data_unit`, `atribut_arsip`, `role_unit`
 * **Patterns:**
     * "Apakah Unit bisa mengisi metadata arsip?"
@@ -224,7 +215,7 @@ total_intent: 25
     * "Apakah Unit bisa mengubah pilihan master data?"
 * **Responses:** Unit dapat mengisi dan memperbarui metadata arsip dalam cakupan unitnya sendiri, seperti informasi pengadaan, status akses, dan informasi anggaran. Unit hanya menggunakan pilihan master data yang tersedia dan tidak dapat mengubah master data sistem.
 
-## 25. Intent: unit_access_denied_reason
+## 24. Intent: unit_access_denied_reason
 * **Tags:** `akses_ditolak_unit`, `error_403`, `batasan_role`, `role_unit`
 * **Patterns:**
     * "Kenapa Unit mendapat akses ditolak?"
@@ -232,3 +223,23 @@ total_intent: 25
     * "Kenapa Unit tidak bisa edit atau hapus arsip?"
     * "Kenapa tombol aksi tidak muncul untuk Unit?"
 * **Responses:** Akses ditolak muncul ketika Unit mencoba membuka halaman atau melakukan aksi di luar kewenangannya. Contohnya adalah mengakses arsip privat Unit lain, mengelola arsip PPK, membuka fitur Super Admin, mengelola akun pengguna lain, atau mengubah master data.
+
+## 25. Intent: unit_activity_history_access
+* **Tags:** `histori_aktivitas_unit`, `riwayat_unit`, `log_unit`, `role_unit`
+* **Patterns:**
+    * "Apakah Unit bisa melihat histori aktivitas?"
+    * "Histori aktivitas apa yang bisa dilihat Unit?"
+    * "Apakah Unit punya akses riwayat aktivitas?"
+    * "Apakah Unit bisa melihat log aktivitas akunnya?"
+    * "Apakah Unit bisa melihat histori aktivitas semua role?"
+    * "Apakah Unit bisa melihat riwayat perubahan arsip?"
+* **Responses:** Unit dapat melihat Histori Aktivitas yang berkaitan dengan arsip milik unitnya sendiri. Unit tidak dapat melihat histori aktivitas arsip milik Unit lain, PPK, atau Super Admin.
+
+## 26 Intent: unit_activity_history_export
+* **Tags:** `export_histori_unit`, `histori_xlsx_unit`, `download_histori_unit`, `role_unit`
+* **Patterns:**
+    * "Apakah Unit bisa export histori aktivitas?"
+    * "Apakah Unit bisa download histori aktivitas XLSX?"
+    * "Apakah Unit bisa mengunduh riwayat aktivitas?"
+    * "Data histori apa yang bisa diexport Unit?"
+* **Responses:** Unit dapat mengekspor Histori Aktivitas dalam format XLSX untuk arsip milik unitnya sendiri. Unit tidak dapat mengekspor histori aktivitas arsip milik Unit lain, PPK, atau Super Admin.

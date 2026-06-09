@@ -198,14 +198,12 @@ total_intent: 23
     * "Kenapa PPK tidak bisa akses Kelola Menu?"
 * **Responses:** PPK tidak memiliki akses ke menu Kelola Menu atau pengaturan master data. Pengelolaan data dropdown seperti Tahun, Unit Kerja, Status Pekerjaan, dan Jenis Pengadaan hanya tersedia untuk Super Admin.
 
-## 22. Intent: ppk_history_bulk_delete_restriction
-* **Tags:** `histori_tidak_tersedia`, `bulk_delete_tidak_tersedia`, `batasan_fitur_ppk`, `role_ppk`
+## 22. Intent: ppk_bulk_delete_restriction
+* **Tags:** `bulk_delete_tidak_tersedia`, `batasan_fitur_ppk`, `role_ppk`
 * **Patterns:**
-    * "Apakah PPK bisa melihat histori aktivitas?"
-    * "Apakah PPK punya menu log aktivitas?"
     * "Apakah PPK bisa bulk delete?"
     * "Kenapa tidak ada hapus massal di PPK?"
-* **Responses:** Saat ini PPK tidak memiliki menu Histori Aktivitas atau Log Aktivitas. Selain itu tidak memiliki fitur bulk delete atau hapus massal.
+* **Responses:** Saat ini PPK tidak memiliki fitur bulk delete atau hapus massal.
 
 ## 23. Intent: ppk_access_denied_reason
 * **Tags:** `akses_ditolak_ppk`, `error_403`, `batasan_role`, `role_ppk`
@@ -215,3 +213,22 @@ total_intent: 23
     * "Kenapa PPK tidak bisa edit atau hapus arsip?"
     * "Kenapa tombol aksi tidak muncul untuk PPK?"
 * **Responses:** Akses ditolak muncul ketika PPK mencoba membuka halaman atau melakukan aksi di luar kewenangannya. Contohnya adalah mengakses arsip milik PPK lain, membuka fitur Super Admin, mengelola akun pengguna lain, atau mengubah master data.
+
+## 24. Intent: ppk_activity_history_access
+* **Tags:** `histori_aktivitas_ppk`, `riwayat_ppk`, `log_ppk`, `role_ppk`
+* **Patterns:**
+    * "Apakah PPK bisa melihat histori aktivitas?"
+    * "Histori aktivitas apa yang bisa dilihat PPK?"
+    * "Apakah PPK punya akses riwayat aktivitas?"
+    * "Apakah PPK bisa melihat log aktivitas semua role?"
+    * "Apakah PPK bisa melihat histori aktivitas Unit dan Super Admin?"
+* **Responses:** PPK dapat melihat Histori Aktivitas arsip milik semua role yang tercatat pada sistem. Cakupan ini meliputi histori aktivitas arsip milik Unit, PPK, dan Super Admin.
+
+## 25. Intent: ppk_activity_history_export
+* **Tags:** `export_histori_ppk`, `histori_xlsx_ppk`, `download_histori_ppk`, `role_ppk`
+* **Patterns:**
+    * "Apakah PPK bisa export histori aktivitas?"
+    * "Apakah PPK bisa download histori aktivitas XLSX?"
+    * "Data histori apa yang bisa diexport PPK?"
+    * "Apakah PPK bisa export log aktivitas semua role?"
+* **Responses:** PPK dapat mengekspor Histori Aktivitas dalam format XLSX untuk arsip milik semua role yang tercatat pada sistem, termasuk Unit, PPK, dan Super Admin.

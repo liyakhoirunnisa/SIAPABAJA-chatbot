@@ -267,11 +267,20 @@ total_intent: 30
     * "Apakah hapus massal tersedia untuk Super Admin?"
 * **Responses:** Saat ini role Super Admin tidak memiliki fitur hapus massal atau bulk delete. Super Admin hanya bisa menghapus arsip satu per satu melalui aksi hapus pada data arsip.
 
-## 30. Intent: super_admin_activity_log_status
-* **Tags:** `histori_aktivitas`, `log_aktivitas`, `audit_trail`, `role_super_admin`
+## 30. Intent: super_admin_activity_history_access
+* **Tags:** `histori_aktivitas_super_admin`, `riwayat_sistem`, `log_aktivitas`, `role_super_admin`
 * **Patterns:**
     * "Apakah Super Admin bisa melihat histori aktivitas?"
-    * "Apakah Super Admin bisa melihat log aktivitas semua role?"
-    * "Apakah ada audit trail di sistem?"
-    * "Kenapa menu histori tidak ada di Super Admin?"
-* **Responses:** Saat ini sistem tidak menyediakan menu Histori Aktivitas, Log Aktivitas, atau Audit Trail untuk Super Admin.
+    * "Histori aktivitas apa yang bisa dilihat Super Admin?"
+    * "Apakah Super Admin bisa melihat semua log aktivitas?"
+    * "Apakah Super Admin punya akses riwayat aktivitas semua role?"
+* **Responses:** Super Admin dapat melihat Histori Aktivitas arsip milik semua role yang tercatat pada sistem. Cakupan ini meliputi histori aktivitas arsip milik Unit, PPK, dan Super Admin.
+
+## 31. Intent: super_admin_activity_history_export
+* **Tags:** `export_histori_super_admin`, `histori_xlsx_super_admin`, `download_histori_sistem`, `role_super_admin`
+* **Patterns:**
+    * "Apakah Super Admin bisa export histori aktivitas?"
+    * "Apakah Super Admin bisa download semua histori aktivitas?"
+    * "Apakah Super Admin bisa export log aktivitas dalam XLSX?"
+    * "Data histori apa yang bisa diexport Super Admin?"
+* **Responses:** Super Admin dapat mengekspor Histori Aktivitas dalam format XLSX untuk arsip milik semua role yang tercatat pada sistem, termasuk Unit, PPK, dan Super Admin.

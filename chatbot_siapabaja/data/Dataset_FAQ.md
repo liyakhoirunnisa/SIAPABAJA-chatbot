@@ -231,3 +231,23 @@ catatan: Detail langkah penggunaan ditempatkan pada Dataset_Workflow. Detail kew
     * "Kenapa halaman tidak bisa dibuka?"
     * "Kenapa sistem tidak merespons?"
 * **Responses:** Periksa koneksi internet, refresh halaman, dan login ulang jika diperlukan. Jika masalah tetap terjadi, hubungi pengelola sistem atau Super Admin.
+
+## 29. Intent: activity_history_access_general
+* **Tags:** `histori_aktivitas`, `akses_histori`, `log_aktivitas`, `pengguna_internal`
+* **Patterns:**
+    * "Siapa saja yang bisa melihat histori aktivitas?"
+    * "Apakah semua role bisa melihat histori aktivitas?"
+    * "Apa perbedaan akses histori aktivitas Unit, PPK, dan Super Admin?"
+    * "Kenapa saya tidak bisa melihat histori aktivitas?"
+    * "Apakah histori aktivitas tersedia untuk pengunjung?"
+* **Responses:** Histori Aktivitas tersedia untuk pengguna internal. Unit hanya dapat melihat histori aktivitas arsip milik unitnya sendiri. PPK dan Super Admin dapat melihat histori aktivitas arsip milik semua role. User publik tidak dapat melihat Histori Aktivitas.
+
+## 30. Intent: activity_history_export_general
+* **Tags:** `export_histori`, `xlsx`, `download_histori`, `riwayat_aktivitas`
+* **Patterns:**
+    * "Siapa saja yang bisa export histori aktivitas?"
+    * "Apakah histori aktivitas bisa diexport ke XLSX?"
+    * "Apa perbedaan export histori Unit, PPK, dan Super Admin?"
+    * "Kenapa export histori aktivitas tidak muncul?"
+    * "Kenapa saya tidak bisa download histori aktivitas?"
+* **Responses:** Export Histori Aktivitas tersedia dalam format XLSX untuk pengguna internal yang berwenang. Unit hanya dapat mengekspor histori aktivitas arsip milik unitnya sendiri. PPK dan Super Admin dapat mengekspor histori aktivitas arsip milik semua role. User publik tidak memiliki akses export Histori Aktivitas.
